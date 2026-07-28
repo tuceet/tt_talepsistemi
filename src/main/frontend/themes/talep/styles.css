@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+/* ============================================================
+   TT Talep Destek — "Ink & Brass" tema
+   Ink   : koyu lacivert-antrasit (#161B26) — guven, kurumsal ciddiyet
+   Brass : sicak amber (#D98E2B)  — oncelik / Pro rozetleri icin imza rengi
+   ============================================================ */
+
+html {
+  --lumo-font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  --tt-ink: #161B26;
+  --tt-ink-soft: #232A3D;
+  --tt-accent: #D98E2B;
+  --tt-accent-soft: rgba(217, 142, 43, 0.14);
+
+  --lumo-primary-color: #1F4B8F;
+  --lumo-primary-color-50pct: rgba(31, 75, 143, 0.55);
+  --lumo-primary-color-10pct: rgba(31, 75, 143, 0.10);
+  --lumo-primary-text-color: #1F4B8F;
+  --lumo-primary-contrast-color: #ffffff;
+
+  --lumo-error-color: #C0433F;
+  --lumo-error-text-color: #C0433F;
+  --lumo-success-color: #2E9469;
+  --lumo-success-text-color: #2E9469;
+
+  --lumo-base-color: #F5F6F8;
+  --lumo-body-text-color: #191D28;
+  --lumo-secondary-text-color: #636B7E;
+  --lumo-tertiary-text-color: #8790A3;
+
+  --lumo-border-radius-s: 8px;
+  --lumo-border-radius-m: 10px;
+  --lumo-border-radius-l: 16px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Space Grotesk', var(--lumo-font-family);
+  letter-spacing: -0.012em;
+  font-weight: 600;
+}
+
+.tt-mono {
+  font-family: 'IBM Plex Mono', ui-monospace, monospace;
+}
+
+vaadin-button[theme~="primary"] {
+  font-family: 'Space Grotesk', var(--lumo-font-family);
+  font-weight: 600;
+  letter-spacing: 0.01em;
+}
+
+vaadin-grid::part(cell) {
+  font-family: var(--lumo-font-family);
+}
+
+/* ---- Signature element: colored status rail on cards ---- */
+.tt-card {
+  background: #ffffff;
+  border-radius: var(--lumo-border-radius-l);
+  border-left: 4px solid var(--tt-accent);
+  box-shadow: 0 1px 2px rgba(22, 27, 38, 0.06), 0 10px 28px rgba(22, 27, 38, 0.07);
+  padding: 1.35rem 1.6rem;
+}
+.tt-card--muted { border-left-color: var(--lumo-contrast-20pct); }
+.tt-card--success { border-left-color: var(--lumo-success-color); }
+.tt-card--danger { border-left-color: var(--lumo-error-color); }
+
+/* ---- Plan / status badges ---- */
+.tt-badge {
+  display: inline-flex;
+  align-items: center;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+  line-height: 1;
+}
+.tt-badge--free { background: var(--lumo-contrast-10pct); color: var(--lumo-secondary-text-color); }
+.tt-badge--pro { background: var(--tt-accent-soft); color: #9C5E12; }
+.tt-badge--proplus { background: var(--tt-ink); color: #F3D9A8; }
+
+/* ---- Dark ink sidebar: local Lumo override scope ---- */
+.tt-sidebar {
+  background: var(--tt-ink);
+  --lumo-base-color: var(--tt-ink);
+  --lumo-body-text-color: #E9EBF1;
+  --lumo-secondary-text-color: #9DA4B8;
+  --lumo-contrast-5pct: rgba(255, 255, 255, 0.05);
+  --lumo-contrast-10pct: rgba(255, 255, 255, 0.09);
+  --lumo-contrast-20pct: rgba(255, 255, 255, 0.15);
+  --lumo-primary-color: var(--tt-accent);
+  --lumo-primary-color-10pct: rgba(217, 142, 43, 0.14);
+  --lumo-primary-text-color: var(--tt-accent);
+  height: 100%;
+  box-sizing: border-box;
+  padding: 0.5rem 0.6rem 1.25rem;
+}
+
+.tt-sidebar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.9rem 0.6rem 1.1rem;
+  color: #F3D9A8;
+  font-family: 'Space Grotesk', var(--lumo-font-family);
+  font-weight: 700;
+  font-size: 1.02rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  margin-bottom: 0.6rem;
+}
+
+/* ---- Hero (landing) ---- */
+.tt-hero {
+  background: linear-gradient(160deg, var(--tt-ink) 0%, #1F4B8F 100%);
+  width: 100%;
+}
+
+.tt-topbar {
+  border-bottom: 1px solid var(--lumo-contrast-10pct);
+  background: #ffffff;
+}
