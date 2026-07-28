@@ -7,8 +7,7 @@ tarafından Etki ve Aciliyet kriterlerine göre (SIMPLE veya AHP yöntemiyle)
 ## Teknolojiler
 - Java 21, Spring Boot 3.5, Vaadin Flow 24
 - Spring Data JPA (Hibernate)
-- H2 (geliştirme) / Oracle veya PostgreSQL (üretim)
-- BCrypt şifreleme, Strategy Pattern (SIMPLE / AHP skorlama)
+
 
 
 ## Durum Akışı
